@@ -29,6 +29,29 @@ Explanation
 
 Each String is left-justified with trailing whitespace through the first  characters. The leading digit of the integer is the  character, and each integer that was less than  digits now has leading zeroes.
 */
+/*DOCUMENTATION*/
+
+https://stackoverflow.com/questions/37780027/what-does-system-out-printf-15s03d-n-s1-x-do
+/*
+My sulution
+L43 - %-15s Give 15 espaces after the string finish couting the size of the string.
+
+    for (int i = 0; i < 3; i++) {
+            String s1 = sc.next();
+            int x = sc.nextInt();
+            int xSize = Integer.valueOf(x).toString().length();
+            s1 = String.format("%-15s", s1);
+            String a = "";
+            if (xSize == 1)
+                a = "00" + x;
+            else if(xSize == 2)
+                a = "0"+x;
+            else
+                a = ""+x;
+
+            System.out.println(s1 + a);
+        }
+*/
 /*Code*/
 
 import java.util.Scanner;
